@@ -1,0 +1,49 @@
+{
+  "name": "interactive-table-project",
+  "homepage": "https://hightensssion.github.io/astral-images/",
+  "version": "1.0.0",
+  "description": "A project to create a customized and interactive table using datatables.js and React.",
+  "main": "src/index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "datatables.net": "^1.10.24",
+    "datatables.net-dt": "^1.13.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.0",
+    "@babel/preset-react": "^7.14.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
+    "gh-pages": "^6.3.0",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

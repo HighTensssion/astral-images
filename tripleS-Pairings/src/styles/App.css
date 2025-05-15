@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.table-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dataTable th, .dataTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.dataTable th {
+    background-color: #007bff;
+    color: white;
+}
+
+.dataTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+#dataTable {
+    position:relative;
+    table-layout: fixed !important;
+    width: 100%;
+}
+
+#dataTable th,
+#dataTable td {
+    width: 130px; /* Set a fixed width for all columns */
+    height: 50px; /* Set a fixed height for all cells */
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#dataTable td.flipped {
+    position: absolute;
+    z-index: 10;
+    width: 500px !important; /* Expanded width */
+    height: 200px !important; /* Expanded height */
+    transition: all 0.3s ease-in-out; /* Smooth flip and resize */
+    white-space:  normal;
+    background-color: #1a191e;
+    color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Reset size for unflipped cells */
+#dataTable td:not(.flipped) {
+    position: static;
+    width: 130px; /* Original width */
+    height: 50px; /* Original height */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Container for the cell content */
+.cell-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px; /* Enables 3D effect */
+    transition: transform 0.6s ease-in-out, width 0.3s ease, height 0.3s ease; /* Smooth flip and resize */
+}
+
+/* Front and back faces of the cell */
+.cell-content .front,
+.cell-content .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back face when flipped */
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Front face */
+.cell-content .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+/* Back face */
+.cell-content .back {
+    z-index: 1;
+    transform: rotateY(180deg);
+    background-color: #1a191e; /* Background for the back face */
+    color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Flipped state */
+.flipped .front {
+    transform: rotateY(-180deg);
+}
+
+.flipped .back {
+    transform: rotateY(0deg);
+}
+
+/* Expanded state */
+.flipped {
+    position: relative;
+    z-index: 10;
+    width: 300px; /* Expanded width */
+    height: 200px; /* Expanded height */
+    transition: transform 0.6s ease-in-out, width 0.3s ease, height 0.3s ease; /* Smooth flip and resize */
+}
+
+/* Reset size when unflipped */
+.cell-content:not(.flipped) {
+    width: 100%;
+    height: 100%;
+}
+
+table.display {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Helvetica Neue LT', Arial, sans-serif; /* Set font */
+}
+
+table.display th,
+table.display td {
+    border: 1px solid #ddd; /* Add borders to cells */
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table.display th {
+    background-color: #f4f4f4; /* Light gray background for headers */
+    color: black;
+    font-weight: bold;
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+table.display td:first-child {
+    font-weight: bold;
+    text-align: center;
+}
+
+table.display th:first-child {
+    font-weight: bold;
+}
+
+table.display td {
+    background-color: #1a191e; /* White background for cells */
+    color: #f4f4f4;
+    font-weight: bold;
+    border: 1px solid #333
+}
+
+table.display tr:nth-child(even) {
+    background-color: #2b2a35; /* Alternate row colors */
+}
+
+table.display tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
