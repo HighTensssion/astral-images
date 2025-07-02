@@ -10,12 +10,12 @@ const manifest = {};
 
 // Define the paths to scan relative to the repository root
 const pathsToScan = [
-  { path: 'assets/members', category: 'Astral Solos' },
-  { path: 'assets/pairings', category: 'Astral Pairings' },
-  { path: 'pairings', category: 'Pairing Customs' },
-  { path: 'pairings/gifs', category: 'Pairing Custom GIFS' },
-  { path: 'singles', category: 'Solo Customs' },
-  { path: 'singles/gifs', category: 'Solo Custom GIFS' }
+  { path: 'public/assets/members', category: 'Astral Solos' },
+  { path: 'public/assets/pairings', category: 'Astral Pairings' },
+  { path: 'public/pairings', category: 'Pairing Customs' },
+  { path: 'public/pairings/gifs', category: 'Pairing Custom GIFS' },
+  { path: 'public/singles', category: 'Solo Customs' },
+  { path: 'public/singles/gifs', category: 'Solo Custom GIFS' }
 ];
 
 // Scan directories and create manifest entries
