@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/astral-images/static/css/main.4cd8d220.css",
-    "main.js": "/astral-images/static/js/main.405933de.js",
+    "main.js": "/astral-images/static/js/main.0e0e9419.js",
     "index.html": "/astral-images/index.html",
     "main.4cd8d220.css.map": "/astral-images/static/css/main.4cd8d220.css.map",
-    "main.405933de.js.map": "/astral-images/static/js/main.405933de.js.map"
+    "main.0e0e9419.js.map": "/astral-images/static/js/main.0e0e9419.js.map"
   },
   "entrypoints": [
     "static/css/main.4cd8d220.css",
-    "static/js/main.405933de.js"
+    "static/js/main.0e0e9419.js"
   ]
 }
